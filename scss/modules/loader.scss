@@ -1,0 +1,27 @@
+.loader {
+  i {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: gray;
+    margin-left: 3px;
+    position: relative;
+    animation: upToDown .5s infinite ease;
+    top: -4px;
+
+    &:nth-child(2) {
+      animation-delay: .1s
+    }
+
+    &:nth-child(3) {
+      animation-delay: .2s
+    }
+  }
+}
+
+@keyframes upToDown {
+    0% {top: -4px;}
+    50% {top: 2px;}
+    100% {top: -4px;}
+}

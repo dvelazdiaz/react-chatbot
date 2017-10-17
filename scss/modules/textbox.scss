@@ -1,0 +1,33 @@
+.textbox {
+  background-color: #ECECEC;
+  padding: 10px;
+  position: absolute;
+  bottom: -55px;
+  left: 0;
+  right: 0;
+  transition: bottom .8s;
+  transition-delay: 3.5s;
+  z-index: 100;
+
+  &.textbox-init {
+    bottom: 0;
+  }
+
+  input {
+    padding: 10px;
+    height: 35px;
+    width: 100%;
+    box-sizing: border-box;
+    border: solid 1px lighten(gray, 30%);
+  }
+
+  button {
+    background-color: lighten(gray, 30%);
+    border: solid 1px lighten(gray, 30%);
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 35px;
+    width: 50px;
+  }
+}
