@@ -7,7 +7,7 @@ class AssistantComponent extends React.Component {
   render() {
     return <div className='assistant'>
                 <Avatar img='images/user.png'/>
-                <h4>Andrea <small>Personal Insurance assistant</small></h4>
+                <h4>{this.props.name} <small>{this.props.description}</small></h4>
               </div>
   }
 }

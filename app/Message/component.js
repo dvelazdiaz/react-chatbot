@@ -11,7 +11,7 @@ class MessageComponent extends React.Component {
       show: false,
       avatar: true,
       loading: true,
-      loadingDelay: this.props.author == 'USER' ? 300 : 1800
+      loadingDelay: this.props.author == 'USER' ? 0 : 1800
     }
   }
 
@@ -37,11 +37,19 @@ class MessageComponent extends React.Component {
       return <Avatar classes={this.state.show ? ' show' : ''} img='images/user.svg'/>
    }
 
+   renderMessageContent() {
+     if(this.props.img) {
+       return <p className={'text-message text-image' + (!this.state.loading ? ' show' : '') + ' ' + this.props.type }><img src={this.props.img}/> </p>
+     } else {
+       return <p className={'text-message' + (!this.state.loading ? ' show' : '') + ' ' + this.props.type }> {this.props.text} </p>
+     }
+   }
+
     renderContent() {
         return <div>
-                    <p className={'loader-message' + (this.state.show ? ' show' : '') + (!this.state.loading ? ' hide' : '')}><Loader/></p>
-                    <p className={'text-message' + (!this.state.loading ? ' show' : '') + ' ' + this.props.type }> {this.props.text} </p>
-                  </div>
+                 <p className={'loader-message' + (this.state.show ? ' show' : '') + (!this.state.loading ? ' hide' : '')}><Loader/></p>
+                 {this.renderMessageContent()}
+               </div>
     }
 
   render() {

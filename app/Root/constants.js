@@ -1,2 +1,3 @@
 //Actions Types
 export const SEND_MESSAGE = 'SEND_MESSAGE'
+export const CHANGE_CONTROL_HEIGHT = 'CHANGE_CONTROL_HEIGHT'

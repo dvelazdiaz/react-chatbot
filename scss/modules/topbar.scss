@@ -1,9 +1,78 @@
 .topbar {
-  position: absolute;
+  position: fixed;
   background-color: white;
   border-bottom: solid 1px #ECECEC;
   height: 55px;
   width: 100%;
   top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
   z-index: 100;
+
+  .logo {
+    float: left;
+    width: 36px;
+    height: 34px;
+    padding: 10px;
+    color: white;
+    background: #222222;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    top: 11px;
+    left: 10px;
+    border-radius: 3px;
+
+    i {
+      position: relative;
+      font-size: 100px;
+      left: -3px;
+      top: -43px;
+    }
+  }
+
+  .settings {
+    float: right;
+    font-size: 28px;
+    position: relative;
+    top: 15px;
+    right: 10px;
+    color: #222222;
+    cursor: pointer;
+
+    &:hover {
+      color: #007bff;
+    }
+  }
+
+  .name {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    line-height: 57px;
+
+    i {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: green;
+      position: relative;
+      top: -2px;
+      left: -5px;
+      animation: fade 1s infinite;
+    }
+  }
+
+  @media(min-width: 768px) {
+    width: 318px;
+  }
+}
+
+@keyframes fade {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
 }
